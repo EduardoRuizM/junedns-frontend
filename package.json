@@ -1,0 +1,21 @@
+{
+  "name": "junedns-frontend",
+  "version": "2.1.0",
+  "author": "Eduardo Ruiz <eruiz@dataclick.es> (https://www.dataclick.es)",
+  "description": "Dataclick Olimpo - JuNeDNS Frontend",
+  "keywords": [
+    "dns", "dns server", "dnssec", "spf", "dkim", "dmarc", "tls over https", "dot", "dns over https", "doh", "letsencrypt", "ipv6", "udp"
+  ],
+  "license": "MIT",
+  "homepage": "https://www.junedns.com",
+  "bugs": {
+    "url": "https://github.com/EduardoRuizM/junedns-frontend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EduardoRuizM/junedns-frontend.git"
+  },
+  "scripts": {
+    "start": "node webserver.js -if404 index.html -dev 1"
+  }
+}
