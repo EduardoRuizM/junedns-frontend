@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+<title data-jpauattr="1" data-jpauihtml="{{ title }}">JuNeDNS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#FEA700">
+<meta name="og:title" content="{{ title }}">
+<link rel="stylesheet" href="/june-cssfa.min.css" />
+<script src="/june-paula.min.js"></script>
+<script>
+function colorScheme(c) {
+  const d = window.matchMedia('(prefers-color-scheme: dark)').matches, l = localStorage.getItem('colorScheme');
+  if(!c || (c && ((d && l === 'light') || (!d && l === 'dark'))))
+    document.documentElement.classList.toggle((d) ? 'light' : 'dark');
+  const e = document.documentElement.classList.contains((d) ? 'light' : 'dark');
+  const v = (e) ? ((d) ? 'light' : 'dark') : null;
+  localStorage.setItem('colorScheme', v);
+  document.getElementById('colorScheme').checked = ((e && v === 'dark') || (!e && d));
+}
+window.addEventListener('load', () => colorScheme(true));
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', m => colorScheme(true));
+</script>
+</head>
+
+<body style="opacity: 0; transition: all .5s">
+
+<div class="main">
+
+  <header style="z-index: 2" class="tc">
+
+    <div style="float: left; padding-top: 20px" class="moby">
+      <nav role="navigation" data-jpau-if="this.main.data.user">
+	<div id="menuToggle">
+	  <input type="checkbox"><span style="background: #FFF"></span><span style="background: #FFF"></span><span style="background: #FFF"></span>
+	  <ul id="menu">
+	    <a href="/domains" is="jpau-link"><li><i class="fa-solid fa-globe"></i> <b>{{ this.text('domains') }}</b></li></a>
+	    <a href="/users" is="jpau-link"><li><i class="fa-solid fa-users"></i> <b>{{ this.text('users') }}</b></li></a>
+	    <a href="/templates" is="jpau-link"><li><i class="fa-solid fa-file-circle-plus"></i> <b>{{ this.text('templates') }}</b></li></a>
+	  </ul>
+	</div>
+      </nav>
+    </div>
+
+    <div style="height: 100px; background: #111">
+      <img src="/logow.png" width="174" height="90" style="padding: 0 10px 0 30px">
+      <select @change="this.setLang($this.value)" style="font-size: .8em">
+	<option data-jpau-for="for(let lang of this.main.langs)" :value="{{ lang.code }}" *selected="this.main.langs[this.lang].code">{{ lang.name }}</option>
+      </select>
+    </div>
+    <div style="height: 28px; padding-top: 6px" class="theme">
+      <div data-jpau-if="this.main.data.user">
+	<div class="mobn tc">
+	  <span data-jpau-if="this.main.data.user?.is_admin">
+	    <div class="ib" style="padding: 0 12px"><a href="/domains" class="tlnk" is="jpau-link" :data-jpau-speech="{{ this.text('domains') }}"><i class="fa-solid fa-globe"></i> <span>{{ this.text('domains') }}</span></a></div>
+	    <div class="ib" style="padding: 0 12px"><a href="/users" class="tlnk" is="jpau-link" :data-jpau-speech="{{ this.text('users') }}"><i class="fa-solid fa-users"></i> <span>{{ this.text('users') }}</span></a></div>
+	    <div class="ib" style="padding: 0 12px"><a href="/templates" class="tlnk" is="jpau-link" :data-jpau-speech="{{ this.text('templates') }}"><i class="fa-solid fa-file-circle-plus"></i> <span>{{ this.text('templates') }}</span></a></div>
+	    <span data-jpau-if="this.voiceOpts().speech"><div class="ib" style="padding: 0 12px"><span @click="this.speech()" class="cp"><i class="fa-solid fa-microphone"></i></span></div></span>
+	  </span>
+	</div>
+	<div class="ib" style="padding: 0 12px"><span @click="this.main.funcs.logout(true)" class="cp jcbred"><i class="fa-solid fa-user-xmark"></i></span></div>
+      </div>
+    </div>
+
+  </header>
+
+  <div style="height: 134px">&nbsp;</div>
+
+  <section>
+    <div class="cards">
+
+<jpau-content>
+<jpau-route path="/" module="modules/login"></jpau-route>
+<jpau-route path="/domains" module="modules/domains_list"></jpau-route>
+<jpau-route path="/domains/new" module="modules/domains_new"></jpau-route>
+<jpau-route path="/domains/:name" module="modules/domains_edit"></jpau-route>
+<jpau-route path="/domains/:name/records" module="modules/records_list"></jpau-route>
+<jpau-route path="/domains/:name/records/new" module="modules/records_new"></jpau-route>
+<jpau-route path="/domains/:name/records/:rid" module="modules/records_edit"></jpau-route>
+<jpau-route path="/users" module="modules/users_list"></jpau-route>
+<jpau-route path="/users/new" module="modules/users_new"></jpau-route>
+<jpau-route path="/users/:id" module="modules/users_edit"></jpau-route>
+<jpau-route path="/templates" module="modules/templates_list"></jpau-route>
+<jpau-route path="/templates/new" module="modules/templates_new"></jpau-route>
+<jpau-route path="/templates/:id" module="modules/templates_edit"></jpau-route>
+<jpau-route path="/templates/:id/records" module="modules/trecords_list"></jpau-route>
+<jpau-route path="/templates/:id/records/new" module="modules/trecords_new"></jpau-route>
+<jpau-route path="/templates/:id/records/:rid" module="modules/trecords_edit"></jpau-route>
+<jpau-route path="(default)" module="modules/404"></jpau-route>
+</jpau-content>
+
+    </div>
+  </section>
+
+  <div style="height: 140px"></div>
+  <footer style="position: absolute; bottom: 0; width: 100%">
+    <div style="height: 60px; padding-top: 14px" class="bgd vm tc">
+      <a href="https://junedns.com" target="_blank">JuNeDNS</a> - Developed with <a href="https://paulajs.com" target="_blank">PaulaJS</a><br>
+      <input id="colorScheme" type="checkbox" class="switch" onclick="colorScheme()" style="--top: -.25em; --checked: '\1F311'; --unchecked: '\2600\FE0F'"></div><div style="height: 18px; padding: 4px; background: #171717" class="bgd sm vm tc"><div style="color: #FFF">
+      &copy; 2024 <a href="https://www.dataclick.es" target="_blank">Dataclick.es</a></div></div>
+  </footer>
+
+</div>
+
+</body>
+</html>
