@@ -1,16 +1,15 @@
 <p align="center">
-  <a href="https://junedns.com"><img src="logo.png" title="JuNeDNS Frontend" width="570" height="300" /></a>
+  <a href="https://github.com/EduardoRuizM/junedns-frontend"><img src="logo.png" title="JuNeDNS Frontend" width="570" height="300"></a>
 </p>
 <h1 align="center">
   <a href="https://github.com/EduardoRuizM/junedns-frontend">EduardoRuizM/junedns-frontend</a>
 </h1>
 <p align="center">
-  Dataclick Olimpo <a href="https://junedns.com">☀️JuNeDNS Frontend</a>
+  Dataclick Olimpo <a href="https://github.com/EduardoRuizM/junedns-frontend">☀️JuNeDNS Frontend</a>
   Safe, Lightweight and Full DNS Server ideal for single or hosting servers
-  https://www.junedns.com
 </p>
 
-# [☀️JuNeDNS Frontend](https://junedns.com "JuNeDNS Frontend")
+# [☀️JuNeDNS Frontend](https://github.com/EduardoRuizM/junedns-frontend "JuNeDNS Frontend")
 ## 🖥️ Frontend for [JuNeDNS Backend](https://github.com/EduardoRuizM/junedns-backend "JuNeDNS Backend")
 
 JuNeDNS is a lightweight DNS server, backend and frontend created in Node.js with a fully functionality and easy installation and use. With templates to easily create domain zones.
@@ -23,7 +22,7 @@ This frontend is made with included [JuNe PaulaJS](https://github.com/EduardoRui
 # Author
 [Eduardo Ruiz](https://github.com/EduardoRuizM) <<eruiz@dataclick.es>>
 
-# [JuNe](https://just-needed.com "JuNe") / JUst NEeded Philosophy
+# JuNe / JUst NEeded Philosophy
 1. **Source code using less code as possible**
   So you can understand code and find bugs easier.
 2. **Few and optimized lines is better**
@@ -52,10 +51,10 @@ export const data = {forceUpdate: false, uploadLargeMax: 10240, backend_url: 'ht
 `npm run start`
 
 ## 🏳Languages
-Help us to translate JuNeDNS in your language 📩 info@junedns.com
+Help us to translate JuNeDNS in your language 📩 info@dataclick.es
 
 | Code | Short code | Language |
-| :---: | --- |
+| :---: | --- | --- |
 | en-US | en | 🇬🇧 English |
 | es-ES | es | 🇪🇸 Español |
 | fr-FR | fr | 🇫🇷 Français |
@@ -70,7 +69,7 @@ So it can be useful as a basis for other types of developments.
 ------------
 
 # Session control token
-The perfect combination between [JuNe PaulaJS](https://paulajs.com "JuNe PaulaJS") and [JuNe BackServer](https://github.com/EduardoRuizM/june-backserver "JuNe BackServer")
+The perfect combination between [JuNe PaulaJS](https://github.com/EduardoRuizM/june-paulajs "JuNe PaulaJS") and [JuNe BackServer](https://github.com/EduardoRuizM/june-backserver "JuNe BackServer")
 You can use the session system of this project.
 - When the user logs in; token, user and token expiration are saved in memory, expiration default is 900 seconds (15 minutes).
 - If you set expiration to -1 then session never expires, so user can enter again without login at any time.
@@ -135,7 +134,6 @@ Checks session with this.main.funcs.checkSession and if true redirects from main
 Checks session with this.main.funcs.checkSession and if false redirects to main page (login).
 This function must be in internal sections that require login: domains, records, users and templates.
 
-[========]
 
 So, actually the session system, which was being used before at the beginning of the Internet, was a bit more practical and needed less code,
 also because HTML is no longer processed in the backend.
@@ -158,7 +156,6 @@ Although then finally the backend may return an error in the request, but you ca
 3) If the user is deleted, or permissions are changed, the frontend does not know it, and does not update the options that the user should see, nor can the session be closed,
    this can be a security breach by continuing to display sensitive information.
 
-[========]
 
 # 🗣 Speech recognition
 Used only in menus, to show how this JuNe PaulaJS feature works, works only in Chromium browsers, if a microphone appears, then you can click and say some menu option to navigate there.
@@ -188,21 +185,24 @@ With this feature, the content being displayed on the page, such as domains or r
 ![Record](snapshot/snapshot5.png "Record")
 
 # JuNeDNS Server & Backend & No-IP
+
 https://github.com/EduardoRuizM/junedns-server
+
 https://github.com/EduardoRuizM/junedns-backend
+
 https://github.com/EduardoRuizM/junedns-noip
 
 # Included to make this project
 | Tech | Name |
 | --- | --- |
-| JavaScript Framework | [JuNe PaulaJS](https://paulajs.com "JuNe PaulaJS") Powerful JavaScript framework - [GitHub](https://github.com/EduardoRuizM/june-paulajs "GitHub") |
+| JavaScript Framework | [JuNe PaulaJS](https://github.com/EduardoRuizM/june-paulajs "JuNe PaulaJS") Powerful JavaScript framework |
 | CSS | [JuNe CSS](https://github.com/EduardoRuizM/june-css "JuNe CSS") |
 | WebServer | [JuNe WebServer](https://github.com/EduardoRuizM/june-webserver "JuNe WebServer") |
 
 # Trademarks©️
 **Dataclick Olimpo JuNeDNS**
-- [Dataclick.es](https://www.dataclick.es "Dataclick.es") is a software development company since 2016.
+- [Dataclick.es](https://www.dataclick.es "Dataclick.es") is a software development company since 2006.
 - [Olimpo](https://www.dataclick.es/en/technology-behind-olimpo.html "Olimpo") is a whole solution software to manage all domains services such as hosting services and to create Webs in a server.
-- [JuNe](https://just-needed.com "JuNe") / JUst NEeded Philosophy, available software and development solutions.
-- [JuNeDNS](https://junedns.com "JuNeDNS") is a part of Dataclick Olimpo domains management for DNS service, released to Internet community.
-- Feel free to use JuNeDNS acording MIT license respecting the brand and image logotype that you can use.
+- JuNe / JUst NEeded Philosophy, available software and development solutions.
+- [JuNeDNS](https://github.com/EduardoRuizM/junedns-server "JuNeDNS") is a part of Dataclick Olimpo domains management for DNS service, released to Internet community.
+- Feel free to use JuNeDNS according MIT license respecting the brand and image logotype that you can use.
