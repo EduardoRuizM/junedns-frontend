@@ -1,6 +1,6 @@
 export const funcs = {
   onMount: async function() {
-    await this.config.funcs.checkSession();
+    await this.main.funcs.checkSession();
   }
 };
 

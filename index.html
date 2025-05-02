@@ -31,8 +31,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', m =
     <div style="float: left; padding-top: 20px" class="moby">
       <nav role="navigation" data-jpau-if="this.main.data.user">
 	<div id="menuToggle">
-	  <input type="checkbox"><span style="background: #FFF"></span><span style="background: #FFF"></span><span style="background: #FFF"></span>
-	  <ul id="menu">
+	  <input id="menuToggleChk" type="checkbox"><span style="background: #FFF"></span><span style="background: #FFF"></span><span style="background: #FFF"></span>
+	  <ul id="menu" @click="this.e('menuToggleChk').checked=false">
 	    <a href="/domains" is="jpau-link"><li><i class="fa-solid fa-globe"></i> <b>{{ this.text('domains') }}</b></li></a>
 	    <a href="/users" is="jpau-link"><li><i class="fa-solid fa-users"></i> <b>{{ this.text('users') }}</b></li></a>
 	    <a href="/templates" is="jpau-link"><li><i class="fa-solid fa-file-circle-plus"></i> <b>{{ this.text('templates') }}</b></li></a>
@@ -94,7 +94,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', m =
   <div style="height: 140px"></div>
   <footer style="position: absolute; bottom: 0; width: 100%">
     <div style="height: 60px; padding-top: 14px" class="bgd vm tc">
-      <a href="https://junedns.com" target="_blank">JuNeDNS</a> - Developed with <a href="https://paulajs.com" target="_blank">PaulaJS</a><br>
+      <a href="https://github.com/EduardoRuizM/junedns-server" target="_blank">JuNeDNS</a> - Developed with <a href="https://github.com/EduardoRuizM/june-paulajs" target="_blank">PaulaJS</a><br>
       <input id="colorScheme" type="checkbox" class="switch" onclick="colorScheme()" style="--top: -.25em; --checked: '\1F311'; --unchecked: '\2600\FE0F'"></div><div style="height: 18px; padding: 4px; background: #171717" class="bgd sm vm tc"><div style="color: #FFF">
       &copy; 2024 <a href="https://www.dataclick.es" target="_blank">Dataclick.es</a></div></div>
   </footer>
